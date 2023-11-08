@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="900.0" styleClass="pane_background" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DoctorHomeController">
+<Pane>
+   <children>
+      <TableView fx:id="table" layoutX="47.0" layoutY="210.0" onMouseClicked="#find_pat" prefHeight="443.0" prefWidth="402.0">
+        <columns>
+          <TableColumn fx:id="identifiant" prefWidth="116.0" text="Identifiant" />
+            <TableColumn fx:id="start_time" minWidth="0.0" prefWidth="128.0" text="Start Time" />
+            <TableColumn fx:id="end_time" prefWidth="157.99998474121094" text="End Time" />
+        </columns>
+      </TableView>
+      <HBox prefHeight="63.0" prefWidth="900.0" style="-fx-background-color: #0CC0DF;">
+         <children>
+            <BorderPane prefHeight="63.0" prefWidth="373.0">
+               <children>
+                  <ImageView fitHeight="79.0" fitWidth="146.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                     </image>
+                  </ImageView>
+               </children>
+            </BorderPane>
+               <Button fx:id="LogOutButton1" alignment="CENTER" layoutX="383.0" layoutY="10.0" mnemonicParsing="false" onAction="#LogOutAction" prefHeight="59.0" prefWidth="118.0" style="-fx-background-color: #0CC0DF;" text="Log Out" textFill="WHITE" underline="true">
+                  <font>
+                     <Font name="Microsoft YaHei Bold" size="14.0" />
+                  </font>
+                  <HBox.margin>
+                     <Insets left="410.0" />
+                  </HBox.margin>
+               </Button>
+         </children>
+      </HBox>
+      <Label alignment="CENTER" layoutX="501.0" layoutY="196.0" prefHeight="43.0" prefWidth="294.0" text="Medical backgroud of the patient :" textFill="#004aad">
+         <font>
+            <Font name="Microsoft YaHei Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="512.0" layoutY="254.0" text="First Name">
+         <font>
+            <Font name="Microsoft YaHei" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="513.0" layoutY="338.0" text="E-mail">
+         <font>
+            <Font name="Microsoft YaHei" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="512.0" layoutY="293.0" text="Last Name">
+         <font>
+            <Font name="Microsoft YaHei" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="first_name" disable="true" layoutX="623.0" layoutY="248.0" prefHeight="25.0" prefWidth="215.0" />
+      <TextField fx:id="last_name" disable="true" layoutX="623.0" layoutY="288.0" prefHeight="25.0" prefWidth="215.0" />
+      <TextField fx:id="email" disable="true" layoutX="623.0" layoutY="331.0" prefHeight="25.0" prefWidth="215.0" />
+      <Label layoutX="223.0" layoutY="87.0" text="Doctor, here you can see all of your upcoming appointments :" textFill="#004aad">
+         <font>
+            <Font name="Microsoft YaHei Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="512.0" layoutY="426.0" text="Information about the patient :" textFill="#004aad">
+         <font>
+            <Font name="Microsoft YaHei Bold" size="16.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="date_select" layoutX="229.0" layoutY="135.0" prefHeight="33.0" prefWidth="296.0" promptText="Select a date.." />
+      <TextArea fx:id="medical_bg" layoutX="494.0" layoutY="454.0" prefHeight="243.0" prefWidth="374.0">
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </TextArea>
+      <Button fx:id="search_btn" layoutX="572.0" layoutY="134.0" mnemonicParsing="false" onAction="#find_app" prefHeight="32.0" prefWidth="134.0" text="Search">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="modify_btn" layoutX="582.0" layoutY="708.0" mnemonicParsing="false" onAction="#modify_pat" prefHeight="32.0" prefWidth="173.0" text="Modify" />
+      <Label layoutX="513.0" layoutY="380.0" text="Mobile">
+         <font>
+            <Font name="Microsoft YaHei" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="mobile" disable="true" layoutX="623.0" layoutY="373.0" prefHeight="25.0" prefWidth="215.0" />
+   </children>
+   </Pane>
+   <top>
+      <Button fx:id="avai_btn" mnemonicParsing="false" onAction="#goto_avai" prefHeight="65.0" prefWidth="136.0" text="My Appointments" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets left="540.0" />
+         </BorderPane.margin>
+      </Button>
+   </top>
+</BorderPane>

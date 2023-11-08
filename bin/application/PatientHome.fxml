@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="900.0" styleClass="pane_background" stylesheets="@Home.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PatientHomeController">
+   <children>
+      <TableView fx:id="FeaturedDoctorsTable" layoutX="55.0" layoutY="522.0" prefHeight="231.0" prefWidth="777.0">
+        <columns>
+          <TableColumn fx:id="FirstName" prefWidth="147.1999053955078" text="First Name" />
+          <TableColumn fx:id="LastName" prefWidth="173.33334350585938" text="Last Name" />
+            <TableColumn fx:id="Specialty" prefWidth="137.86666870117188" text="Specialty" />
+            <TableColumn fx:id="PhoneNumber" prefWidth="136.53326416015625" text="Phone Number" />
+            <TableColumn fx:id="Location" prefWidth="183.7333984375" text="Location" />
+        </columns>
+      </TableView>
+      <Label layoutX="46.0" layoutY="465.0" prefHeight="31.0" prefWidth="167.0" text="Featured Doctors" textFill="#004aad">
+         <font>
+            <Font name="Microsoft YaHei Bold" size="18.0" />
+         </font></Label>
+      <HBox prefHeight="63.0" prefWidth="900.0" style="-fx-background-color: #0CC0DF;">
+         <children>
+            <Pane prefHeight="63.0" prefWidth="373.0">
+               <children>
+                  <ImageView fitHeight="79.0" fitWidth="146.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Desktop/S4/JavaAPI/LOGO.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Button fx:id="HomeButton" layoutX="504.0" layoutY="10.0" mnemonicParsing="false" onAction="#HomeAction" prefHeight="57.0" prefWidth="122.0" style="-fx-background-color: #0CC0DF;" text="Home" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft YaHei Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="searchButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#SearchAction" prefHeight="57.0" prefWidth="122.0" style="-fx-background-color: #0CC0DF;" text="Search " textFill="WHITE">
+               <font>
+                  <Font name="Microsoft YaHei Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="myAppointmentsButton" layoutX="504.0" layoutY="10.0" mnemonicParsing="false" onAction="#MyAppointmentsAction" prefHeight="59.0" prefWidth="167.0" style="-fx-background-color: #0CC0DF;" text="My appointments" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft YaHei Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="LogOutButton" layoutX="504.0" layoutY="10.0" mnemonicParsing="false" onAction="#LogOutAction" prefHeight="59.0" prefWidth="118.0" style="-fx-background-color: #0CC0DF;" text="Log Out" textFill="WHITE">
+               <font>
+                  <Font name="Microsoft YaHei Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Text fx:id="welcomeText" layoutX="663.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello  !">
+         <font>
+            <Font name="Microsoft YaHei" size="22.0" />
+         </font></Text>
+      <Text layoutX="197.0" layoutY="297.0" opacity="0.74" strokeType="OUTSIDE" strokeWidth="0.0" text="Our Doctor Booking App! With just a few clicks, you can easily schedule an appointment with your preferred doctor. Browse our list of doctors and select an available appointment slot that suits your schedule. With our user-friendly interface, booking a doctor's appointment has never been easier." textAlignment="CENTER" wrappingWidth="506.1319580078125">
+         <font>
+            <Font name="Microsoft YaHei Bold" size="15.0" />
+         </font>
+      </Text>
+      <Label layoutX="309.0" layoutY="216.0" prefHeight="39.0" prefWidth="283.0" text="Welcome to TECH-RV !" textFill="#0cc0df" wrapText="true">
+         <font>
+            <Font name="Microsoft YaHei Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

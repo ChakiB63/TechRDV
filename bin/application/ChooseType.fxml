@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="460.0" styleClass="pane_background_center" stylesheets="@LoginPage.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ChooseTypeController">
+   <right>
+      <Button mnemonicParsing="false" onAction="#TypeDoctorChosen" prefHeight="137.0" prefWidth="180.0" style="-fx-border-color: #004aad; -fx-background-color: white;" text="DOCTOR" textAlignment="CENTER" textFill="#0cc0df" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="40.0" right="30.0" />
+         </BorderPane.margin>
+         <font>
+            <Font name="Microsoft YaHei Bold" size="20.0" />
+         </font>
+      </Button>
+   </right>
+   <top>
+      <Label alignment="BOTTOM_CENTER" prefHeight="56.0" prefWidth="226.0" text="Sign Up as a Doctor or a Patient ?" textAlignment="CENTER" wrapText="true" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets top="60.0" />
+         </BorderPane.margin>
+         <font>
+            <Font name="Microsoft YaHei Bold" size="20.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <Button mnemonicParsing="false" onAction="#TypePatientChosen" prefHeight="137.0" prefWidth="180.0" style="-fx-background-color: #0cc0df;" text="PATIENT" textFill="WHITE" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="40.0" left="30.0" />
+         </BorderPane.margin>
+         <font>
+            <Font name="Microsoft YaHei Bold" size="20.0" />
+         </font>
+      </Button>
+   </center>
+</BorderPane>

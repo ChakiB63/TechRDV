@@ -1,0 +1,9 @@
+.vbox_background_left{
+	
+	-fx-background-image:url("DoctorImage.jpg")
+	
+}
+.pane_background_center{
+	
+	-fx-background-image:url("BackLogin.png")
+}
